@@ -42,6 +42,12 @@
         android:text="@string/crime_report_text"/>
 
     <Button
+        android:id="@+id/show_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="show map"/>
+
+    <Button
         android:id="@+id/remove_crime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

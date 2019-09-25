@@ -66,6 +66,7 @@ public class CrimeListFragment extends Fragment {
         }
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

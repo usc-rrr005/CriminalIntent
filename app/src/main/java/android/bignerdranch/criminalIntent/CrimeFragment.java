@@ -33,6 +33,7 @@ public class CrimeFragment extends Fragment {
     private CheckBox mSolvedCheckBox;
     private Button mDeleteButton;
     private Button mSuspectButton;
+    private Button mShowMapButton;
     private Button mReportButton;
     private static final String DIALOG_DATE = "DialogDate";
     private static final String ARG_CRIME_ID = "crime_id";
@@ -128,6 +129,9 @@ public class CrimeFragment extends Fragment {
             }
         });
 
+        /*mShowMapButton = (Button) v.findViewById(R.id.show_map);
+        mShowMapButton.setOnClickListener();*/
+
         final Intent pickContact = new Intent(Intent.ACTION_PICK,
                 ContactsContract.Contacts.CONTENT_URI);
         //pickContact.addCategory(Intent.CATEGORY_HOME); **this was supposed to grey out the choose suspect button**
@@ -144,21 +148,6 @@ public class CrimeFragment extends Fragment {
         return v;
     }
 
-    //stuff for delete crime
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.remove_crime:
-                UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID);
-                CrimeLab crimeLab = CrimeLab.get(getActivity());
-                mCrime = crimeLab.getCrime(crimeId);
-                crimeLab.deleteCrime(mCrime);
-                getActivity().finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
