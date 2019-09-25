@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -82,8 +83,15 @@ public class CrimeListFragment extends Fragment {
                 getActivity().invalidateOptionsMenu();
                 updateSubtitle();
                 return true;
-                default:
+            case R.id.help:
+                Intent i = CrimeActivity
+                        .webIntent(getActivity(),"http:www.wikihow.com/Check-In-on_Facebook");
+                startActivity(i);
+                return true;
+
+            default:
                     return super.onOptionsItemSelected(item);
+
         }
     }
 

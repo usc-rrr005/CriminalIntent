@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import java.util.UUID;
@@ -19,6 +20,11 @@ public class CrimeActivity extends SingleFragmentActivity {
         intent.putExtra(EXTRA_CRIME_ID, crimeId);
         return intent;
     }
+
+    /*public static Intent webIntent(Context packageContext, String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http:www.wikihow.com/Check-In-on_Facebook"));
+        return i;
+    }*/
 
     /*@Override
     protected void onCreate(Bundle savedInstanceState) {
