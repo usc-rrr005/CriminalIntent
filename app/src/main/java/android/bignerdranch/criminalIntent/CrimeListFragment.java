@@ -84,7 +84,7 @@ public class CrimeListFragment extends Fragment {
                 updateSubtitle();
                 return true;
             case R.id.help:
-                Intent i = CrimeActivity
+                Intent i = HelpWebPage
                         .webIntent(getActivity(),"http:www.wikihow.com/Check-In-on_Facebook");
                 startActivity(i);
                 return true;

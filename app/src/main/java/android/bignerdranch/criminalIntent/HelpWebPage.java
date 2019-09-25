@@ -2,6 +2,7 @@ package android.bignerdranch.criminalIntent;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -20,6 +21,10 @@ public class HelpWebPage extends AppCompatActivity {
 
 
 
+    public static Intent webIntent(Context packageContext, String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http:www.wikihow.com/Check-In-on_Facebook"));
+        return i;
+    }
 
 
     @Override
@@ -52,7 +57,7 @@ public class HelpWebPage extends AppCompatActivity {
             }
         });
 
-        mWebView.loadUrl("http://www.usc.edu.au");
+        //mWebView.loadUrl("http://www.usc.edu.au");
     }
 
 
