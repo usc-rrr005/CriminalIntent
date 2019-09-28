@@ -37,7 +37,6 @@ public class CrimeFragment extends Fragment {
     private Button mReportButton;
     private static final String DIALOG_DATE = "DialogDate";
     private static final String ARG_CRIME_ID = "crime_id";
-
     private static final int REQUEST_CONTACT = 1;
     private static final int REQUEST_DATE = 0;
 
@@ -77,6 +76,8 @@ public class CrimeFragment extends Fragment {
             }
         });
 
+
+
         mTitleField = (EditText) v.findViewById(R.id.crime_title);
         mTitleField.setText(mCrime.getTitle());
         mTitleField.addTextChangedListener(new TextWatcher() {
@@ -105,6 +106,7 @@ public class CrimeFragment extends Fragment {
                 getActivity().finish();
             }
         });
+
 
         mSolvedCheckBox = (CheckBox)v.findViewById(R.id.crime_solved);
         mSolvedCheckBox.setChecked(mCrime.isSolved());
